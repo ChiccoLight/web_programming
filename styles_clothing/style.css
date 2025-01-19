@@ -18,8 +18,13 @@ body, html {
 
 }
 
+
+#title {
+  margin-top: 0;
+}
 .headsection{
     background-image: url("pictures/background_headsection.jpg");
+    
     height: 100%;
     background-position-x: center;
     background-position-y: top;
