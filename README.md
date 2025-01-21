@@ -20,7 +20,7 @@ Dieses Projekt ist eine Website für Styles Clothing, die verschiedene Kleidungs
 
 1. Klone das Repository:
     ```sh
-    git clone (https://github.com/ChiccoLight/web_programming.git)
+    git clone https://github.com/ChiccoLight/web_programming.git
     ```
 
 2. Navigiere in das Projektverzeichnis:
