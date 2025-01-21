@@ -48,26 +48,35 @@ let p = 1;
     alert(srcName);
   }*/
 
-  function furtherPic(){
+  function furtherPic(N){        //Ruft vorheriges Bild auf
     let srcName = document.getElementById("pic").src;
-    let numb = srcName.at(98);
-    if(numb<=1){
-      document.getElementById("lt").style.color = "#ddd";
-      return;
+    let n = srcName.length;
+    srcName = srcName.slice(n-29,n)
+    let numb = srcName.at(24);
+    if(numb == 1){
+      numb = N;
     }
-    else
+    else{
     numb = Number(numb) - 1;
+    }
     numb = String(numb);
-    let newSrcName = srcName.slice(0,98) + numb + srcName.slice(99,103);
+    let newSrcName = srcName.slice(0,24) + numb + srcName.slice(25,n);
     document.getElementById("pic").src = newSrcName;
   }
 
-  function ratherPic(){
+  function ratherPic(N){       //Ruft darauffolgendes Bild auf
     let srcName = document.getElementById("pic").src;
-    let numb = srcName.at(98);
+    let n = srcName.length;
+    srcName = srcName.slice(n-29,n)
+    let numb = srcName.at(24);
+    if(numb == N){
+      numb = 1;
+    }
+    else{
     numb = Number(numb) + 1;
+    }
     numb = String(numb);
-    let newSrcName = srcName.slice(0,98) + numb + srcName.slice(99,103);
+    let newSrcName = srcName.slice(0,24) + numb + srcName.slice(25,n);
     document.getElementById("pic").src = newSrcName;
   }
 
