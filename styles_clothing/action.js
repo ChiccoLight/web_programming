@@ -1,26 +1,78 @@
-//Global Varable-declaration
+// Register Scroll Trigger Plugin
+gsap.registerPlugin(ScrollTrigger);
+
+
+/**
+ * @description Function to animate the items in the main section.
+ * Fades the items in and moves them up.
+ */
+gsap.utils.toArray(".item").forEach((item) => {
+  gsap.fromTo(
+    ".item",
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2, // Verzögerung zwischen den Items
+      scrollTrigger: {
+        trigger: ".row",    // Die gesamte `.row` als Trigger
+        start: "top 85%",
+        end: "top 50%",
+        toggleActions: "play none none none",
+      },
+    }
+  );
+});
+
+
+// Keep track of the current state of the sidebar
 let sidebar = false;
 
-function sidebar_open() {
-  if (sidebar == false){
-    document.getElementById("sidebar").style.display = "block";
-    document.getElementById("sidebarbtn").style.color = "#fff";
-    sidebar = true;
-  }
-  else
-  sidebar_close();
-  //document.getElementById("sidebar-button").style.display = "none";
-  }
-  
-  function sidebar_close() {
-    document.getElementById("sidebar").style.display = "none";
-    document.getElementById("sidebarbtn").style.color = "#000";
-    sidebar = false;
-  }
 
-  function imgOpen(){
-    document.getElementById("pic").style.height = "100%";
+/**
+ * @description Function to open the sidebar.
+ * Sets the display of the sidebar to block and animates it to the right.
+ */
+function sidebar_open() {
+  if (!sidebar) {
+    document.getElementById("sidebar").style.display = "block";
+    gsap.to("#sidebar", {
+        duration: 0.5,      // Dauer der Animation
+        left: 0,            // Sidebar nach 0px (sichtbar) bewegen
+        ease: "power3.out"  // Sanfter Übergang
+    });
+    document.getElementById("sidebarbtn").style.color = "#fff";
+    sidebar = true;    // Status aktualisieren
+  } else {
+    sidebar_close();
   }
+}
+
+
+/**
+ * @description Function to close the sidebar.
+ * Animates the sidebar to the left and sets the display to none.
+ */
+function sidebar_close() {
+  gsap.to("#sidebar", {
+      duration: 0.5,         // Dauer der Animation
+      left: -300,            // Sidebar zurück nach -300px bewegen
+      ease: "power3.in"      // Sanfter Übergang
+  });
+  document.getElementById("sidebar").style.display = "none";
+  document.getElementById("sidebarbtn").style.color = "#000";
+  sidebar = false;       // Status aktualisieren
+}
+
+
+/**
+ * @description Function to open the image.
+ */
+function imgOpen(){
+  document.getElementById("pic").style.height = "100%";
+}
 
 /*
 let b = 1;
