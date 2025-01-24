@@ -19,12 +19,14 @@ body {
 
 header {
     grid-area: header;
+    width: 100%;
     color: white;
     padding: 10px;
     background-image: url("pictures/salepics/sale.png");
     background-size: contain;
     background-position: center;
-    position: relative;
+    position: fixed;
+    z-index: 1000;
     
 }
 
