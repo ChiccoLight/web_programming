@@ -1,50 +1,112 @@
-
 body {
     display: grid;
     margin: 0;
     height: 100vh;
 }
 
-.grid-container-sale{
+:root {
+    --header-height: 100px;
+    --nav-height: 50px;
+    --aside-width: 435px;
+    --footer-height: 100px;
+    --grid-gap-bottom: 10px;
+}
+
+.grid-container-sale {
     display: grid;
     grid-template-areas:
         "header header"
         "nav nav"
         "aside main"
         "footer footer";
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 1fr 2fr 1fr;
     height: 100vh;
+    width: 100%;
+    
 }
 
 header {
     grid-area: header;
-    width: 100%;
-    color: white;
-    padding: 10px;
-    background-image: url("pictures/salepics/sale.png");
-    background-size: contain;
-    background-position: center;
     position: fixed;
-    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    color: white;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    
+    
     
 }
 
+.headerLeft {
+    display: flex;
+    align-content: center;
+    padding: 10px;
+
+}
+
+.headerRight {
+    background-color: #ffffff;
+    overflow: hidden;
+     
+     
+    position: relative;
+    
+}
+
+.headerRightBlink {
+    
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92%;
+    height: calc(var(--header-height) + 50px);
+    background-image: url("pictures/salepics/sale2.png");
+    background-size: contain;
+    
+    opacity: 1; /* Start mit voller Sichtbarkeit */
+    z-index: 1;
+  }
+
+
 nav {
     grid-area: nav;
-    background-color: #f4f4f4;
-    padding: 10px;
+    position: fixed;
+    top: calc(var(--header-height) + var(--nav-height));
+    width: 100%;
+    margin-right: 90px;
+    
+    height: var(--nav-height);
+    padding: 10px; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    z-index: 10;
+    background-color: white;
 }
 
 main {
     grid-area: main;
-    padding: 20px;
+    
+    margin-top: calc(var(--header-height) + var(--nav-height));
+    align-items: center;
+    justify-items: center;
+    
 }
 
 aside {
     grid-area: aside;
-    background-color: #f0f0f0;
-    padding: 10px;
+    position: fixed;  
+    margin-top: calc(var(--header-height) + var(--nav-height));
+       
+    background-color: #ffffff;
+    z-index: 9;
 }
 
 footer {
@@ -56,61 +118,42 @@ footer {
 }
 
 /*Schriften*/
-h1{
+h1 {
     position: relative;
     top: 30px;
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
-    text-align: center; 
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 30px;
 }
 
 /*Buttons*/
-.saleButtons{
-    text-transform: uppercase;
-    opacity: 0.9;
-    border-color: #000;
-}
 
 #title {
     margin-top: 0;
 }
 
-.headsection_sale{
-    grid-area: header;
-    
-}
-h1{
-    position: relative;
-    top: 30px;
-    font-size: 4em;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center; 
-   
-    text-transform: uppercase;
-    letter-spacing: 30px;
-
-}
-.sidebarbtn{
+.sidebarbtn {
     font-size: 40px;
     padding-top: 0px;
     padding-left: 6px;
     color: #000;
-    height: 60px;
+    height: 130px;
     width: 60px;
-    position:absolute;
     left: 20px;
-    top: 20px;
+
     background-color: transparent;
     border: 0px;
     cursor: pointer;
+    position: relative;
+    z-index: 20;
 }
 
-.sidebarclosebtn{
+.sidebarclosebtn {
     font-size: 25px;
     color: #fff;
-    position:absolute;
+    position: absolute;
     left: 150px;
     top: 10px;
     background-color: #000;
@@ -118,21 +161,105 @@ h1{
     width: 40px;
     border: none;
     cursor: pointer;
+    z-index: 20;
 }
 
-.sidebar{
-    padding-top: 40px;
+.sidebar {
+    padding-top: var(--header-height);
     font-size: 25px;
     color: #fff;
-    position:absolute;
+    position: absolute;
     left: 20px;
     top: 20px;
+    top: var(--header);
     background-color: #000;
     height: auto;
     width: 200px;
     border: none;
     display: flex;
+    z-index: 100;
 }
 
+/* Fußbereich */
+footer {
+    padding: 40px;
+    text-align: left;
+    background: #000;
+}
 
+.foottxt {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
 
+.foottxt:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn1 {
+    
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-right: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+.btn2 {
+    width: 50%;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-nav {
+    padding: px;
+    font-size: 25px;
+    background-color: #d33131;
+    color: rgb(0, 0, 0);
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+
+  .btn-warning {
+    background-color: #ffc107;
+    color: black;
+  }
+
+  /*Picture Sale */
+  .salePicture {
+    width: 20%;
+    height: 40%;
+  }
+
+  .sale {
+    width: 50%;
+  }
+  
+
+  
