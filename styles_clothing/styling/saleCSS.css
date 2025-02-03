@@ -60,7 +60,7 @@ header {
   left: 0;
   width: 98%;
   height: calc(var(--header-height));
-  background-image: url("pictures/salepics/sale2.png");
+  background-image: url("../pictures/salepics/sale2.png");
   background-size: contain;
   opacity: 1;
   /* Start mit voller Sichtbarkeit */

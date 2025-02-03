@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SALE%</title>
-    <link rel="stylesheet" href="saleCSS.css">
+    <link rel="stylesheet" href="../styling/saleCSS.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
@@ -23,13 +23,9 @@
             <div class="headerRight">
                 <div class="headerRightBlink"></div>
             </div>
-
-
         </header>
-        <!--Navigationsleiste kleidung-->
+
         <nav>
-
-
             <!--Sidebar-->
             <div class="sidebar sidebar-block" style="display:none" id="sidebar">
                 <ul class="list">
@@ -39,11 +35,10 @@
                     <li><a class="hyperstyle1" href="#shorts" onclick="sidebar_close()">Shorts</a></li>
                     <li><a class="hyperstyle1" href="#shirts" onclick="sidebar_close()">Shirts</a></li>
                     <li><a class="hyperstyle1" href="#sweater" onclick="sidebar_close()">Sweater</a></li>
-                    <li><a class="hyperstyle1" href="#contact" onclick="sidebar_close()">Contact</a></li>
+                    <li><a class="hyperstyle1" href="../pages/contact.html" onclick="sidebar_close()">Contact</a></li>
                     <li><button class="sidebarclosebtn" onclick="sidebar_close()">&times;</button></li>
                 </ul>
             </div>
-
 
             <button id="scrollToTop" class="btn1 btn-nav" onclick="scrollTo()">! END OF SEASON !</button>
             <!--
@@ -60,7 +55,7 @@
             <button class="btn2 btn-danger">Kids</button>
             <button class="btn2 btn-warning">SuperSale</button>
 
-            <img class="sale" src="pictures/salepics/sale2.png" alt="sale">
+            <img class="sale" src="../pictures/salepics/sale2.png" alt="sale">
 
         </aside>
         <!--Hauptinhalt-->
@@ -69,40 +64,40 @@
                 <div class="picture1">
                     <div class="textContent1">Stilvolles</div>
                     <div>
-                        <img src="pictures/salepics/hemdSchuhe.png" alt="hemdSchuhe">
+                        <img src="../pictures/salepics/hemdSchuhe.png" alt="hemdSchuhe">
                     </div>
                 </div>
                 <div class="picture2">
 
                     <div class="textContent1">feierlicher Anlass</div>
                     <div>
-                        <img src="pictures/salepics/sakkos.png" alt="hemdSchuhe">
+                        <img src="../pictures/salepics/sakkos.png" alt="hemdSchuhe">
                     </div> 
                 </div>
                 <div class="picture3">
                     <div class="textContent2">Moderne Marken,<br> für Sie und Ihn</div>
                     <div>
-                        <img src="pictures/salepics/schuhe.jpg" alt="hemdSchuhe">
+                        <img src="../pictures/salepics/schuhe.jpg" alt="hemdSchuhe">
                     </div>
 
                 </div>
                 <div class="picture4">
                     <div class="textContent1">Klassik</div>
                     <div>
-                        <img src="pictures/salepics/vintage.jpg" alt="hemdSchuhe">
+                        <img src="../pictures/salepics/vintage.jpg" alt="hemdSchuhe">
                     </div>
                 </div>
                 <div class="picture5">
                     <div class="textContent1">Vintage</div>
                     <div>
-                        <img src="pictures/salepics/vintage2.jpg" alt="hemdSchuhe">
+                        <img src="../pictures/salepics/vintage2.jpg" alt="hemdSchuhe">
                     </div>
                     
                 </div>
                 <div class="picture6">
                     <div class="textContent2">Ob Regen oder Sonne, <br>immer die passende Wahl</div>
                     <div>
-                        <img src="pictures/salepics/nike2.jpg" alt="hemdSchuhe">
+                        <img src="../pictures/salepics/nike2.jpg" alt="hemdSchuhe">
                     </div>
 
                 </div>
@@ -112,14 +107,14 @@
         <!--Fußbereich-->
         <footer>
             <div class="footer">
-                <a class="foottxt" href="#">impressum</a><br>
-                <a class="foottxt" href="#">contact</a><br>
-                <a class="foottxt" href="#">about</a>
+                <a class="foottxt" href="../pages/contact.html">impressum</a><br>
+                <a class="foottxt" href="../pages/contact.html">contact</a><br>
+                <a class="foottxt" href="../pages/contact.html">about</a>
             </div>
         </footer>
     </div>
 
-    <script src="action.js"></script>
+    <script src="../js/action.js"></script>
 </body>
 
 </html>
