@@ -159,4 +159,11 @@ let p = 1;
     yoyo: true,
     ease: "power1.inOut"
   });
+
+  document.getElementById('scrollToTop').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Sanftes Scrollen
+    });
+});
   

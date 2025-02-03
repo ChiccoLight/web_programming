@@ -2,7 +2,6 @@ body {
   display: grid;
   margin: 0;
   height: 100vh;
-
 }
 
 :root {
@@ -24,7 +23,6 @@ body {
   grid-template-rows: 1fr 1fr auto 1fr;
   height: 100vh;
   width: 100%;
-
 }
 
 header {
@@ -39,75 +37,60 @@ header {
   justify-content: center;
   display: grid;
   grid-template-columns: 1fr 15fr;
-
-
-
 }
 
 .headerLeft {
   display: grid;
   align-content: center;
   place-items: center;
-
-  padding: 10px;
   background-color: #ffffff;
   height: calc(var(--header-height));
-
 }
 
 .headerRight {
   background-color: #ffffff;
-
   height: calc(var(--header-height));
-
-
   position: relative;
-
 }
 
 .headerRightBlink {
-
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 96%;
+  width: 98%;
   height: calc(var(--header-height));
   background-image: url("pictures/salepics/sale2.png");
   background-size: contain;
-
   opacity: 1;
   /* Start mit voller Sichtbarkeit */
   z-index: 1;
 }
 
-
 nav {
   grid-area: nav;
+  display: grid;
   position: fixed;
   top: calc(var(--header-height));
-  width: 100%;
-
-
+  width: 99%;
   height: calc(var(--nav-height) + 20px);
-  padding: 0px 10px 0px 10px;
-  display: grid;
+  padding-left: 10px;
+  
+  
+  
   /* for three buttons
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;*/
   text-align: center;
   z-index: 10;
-
 }
 
 main {
   grid-area: main;
   display: grid;
-
   padding-top: calc(var(--header-height) + var(--nav-height) + var(--grid-gap-bottom));
   padding-bottom: 10px;
   margin-right: 10px;
-
 }
 
 aside {
@@ -122,15 +105,14 @@ aside {
 footer {
   grid-area: footer;
   display: grid;
-
   z-index: 1;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   padding: 20px 10px;
   height: auto;
   text-align: left;
   background: #000;
-
 }
 
 .foottxt {
@@ -155,7 +137,6 @@ h1 {
 }
 
 /*Buttons*/
-
 #title {
   margin-top: 0;
 }
@@ -163,12 +144,9 @@ h1 {
 .sidebarbtn {
   font-size: 40px;
   align-items: center;
-
   color: #000;
   height: var(--header-height);
   width: var(--grid-gap-bottom);
-
-
   background-color: transparent;
   border: 0px;
   cursor: pointer;
@@ -206,8 +184,6 @@ h1 {
   z-index: 100;
 }
 
-
-
 /* Buttons */
 .btn1 {
   font-weight: bolder;
@@ -216,7 +192,6 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-
   display: inline-block;
   transition: background-color 0.3s ease;
 }
@@ -234,7 +209,6 @@ h1 {
   margin: 10px;
   display: inline-block;
   transition: background-color 0.3s ease;
-
 }
 
 .btn-nav {
@@ -288,47 +262,208 @@ h1 {
   grid-template-areas:
     "picture1 picture2"
     "picture3 picture3"
-    "picture5 picture6";
+    "picture4 picture5"
+    "picture6 picture6";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-
+  gap: 30px;
   width: 100%;
+}
 
+.pictureText {
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+  font-weight: bold;
+}
 
+.pictureMain img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+  border-radius: 5px;
+}
+
+.pictureMain div {
+  display: grid;
+  grid-template-rows: auto;
+  position: relative;
+  height: auto;
+  width: auto;
+  place-items: center;
 }
 
 .picture1 {
   grid-area: picture1;
-  display: grid;
-  background-image: url("pictures/salepics/schuhe.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: auto;
-
-  width: auto;
-  border-radius: 5px;
+  grid-template-rows: 1fr auto;
+}
+.picture1 img {
+  grid-row: 2;
 }
 
 .picture2 {
   grid-area: picture2;
-  display: grid;
-  background-image: url("pictures/salepics/kleid.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 400px;
-  width: 100%;
-  border-radius: 5px;
+  grid-template-rows: 1fr auto;
+}
+
+.picture2 img {
+  grid-row: 2;
 }
 
 .picture3 {
   grid-area: picture3;
-  background-image: url("pictures/salepics/jeans.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 400px;
-  width: 400px;
-  border-radius: 5px;
+  grid-template-columns: 1fr auto;
+  margin-right: 30%;
+}
+
+.textContent1 {
+  grid-row: 1;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+.textContent2 {
+  grid-column: 1;
+  display: grid;
+  justify-self: right;
+  align-self: center;
+  text-align: center;
+  margin-right: 10%;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.picture3 img {
+  grid-column: 2;
+}
+
+.picture4 {
+  grid-area: picture4;
+}
+
+.picture5 {
+  grid-area: picture5;
+}
+
+.picture6 {
+  grid-area: picture6;
+  grid-template-columns: 1fr auto;
+  margin-right: 30%;
+}
+
+.picture6 img {
+  grid-column: 2;
+}
+
+/*Media*/
+@media (max-width: 1200px) {
+  .grid-container-sale {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container-sale {
+    grid-template-columns: 1fr 3fr; /* Verkleinert die Breite von aside proportional */
+  }
+
+  main div, main div * {
+    font-size: calc(1rem * 0.3); /* Verkleinert alle Texte innerhalb der `divs` */
+  }
+
+  .textContent1 {
+    font-size: calc(30px * 0.4); /* Verkleinert spezielle Textinhalte in den Grids */
+  }
+  .textContent2 {
+    font-size: calc(30px * 0.4); /* Verkleinert spezielle Textinhalte in den Grids */
+  }
+
+  aside {
+    transform: scale(0.6); /* Verkleinert alle Inhalte in der `aside` proportional */
+    transform-origin: top left; /* Verkleinert ausgehend von der oberen linken Ecke */
+  }
+
+  nav {
+    padding: 5px;
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .btn-nav {
+    font-size: 20px;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    padding: 5px;
+    height: auto;
+  }
+
+  footer {
+    width: 100%; /* Passt sich automatisch der Bildschirmbreite an */
+    padding: 10px; /* Weniger Padding für kompakteren Footer */
+  }
+
+  footer .foottxt {
+    font-size: 0.8rem; /* Kleinere Schrift, aber noch gut lesbar */
+  }
+
+  .sidebarbtn {
+    justify-self: start;
+    padding-left: 5px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .grid-container-sale {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  main div, main div * {
+    font-size: calc(1rem * 0.2); /* Verkleinert alle Texte auf kleineren Bildschirmen */
+  }
+
+  .textContent1 {
+    font-size: calc(30px * 0.3);
+  }
+  .textContent2 {
+    font-size: calc(30px * 0.3);
+  }
+
+  aside {
+    transform: scale(0.5); /* Noch kleinere Verkleinerung bei sehr kleinen Bildschirmen */
+    transform-origin: top left;
+  }
+
+  nav {
+    padding: 5px;
+  }
+
+  .btn-nav {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 5px;
+  }
+
+  footer {
+    width: 100%;
+    padding: 10px;
+  }
+
+  footer .foottxt {
+    font-size: 0.7rem; /* Noch kleinere Schrift für kleine Bildschirme */
+  }
+
+  .sidebarbtn {
+    font-size: 16px;
+  }
 }
