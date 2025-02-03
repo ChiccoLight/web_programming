@@ -1,7 +1,7 @@
 body {
   display: grid;
   margin: 0;
-  height: 100vh;
+  height: 100%;
 }
 
 :root {
@@ -58,7 +58,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 98%;
+  width: 96%;
   height: calc(var(--header-height));
   background-image: url("../pictures/salepics/sale2.png");
   background-size: contain;
@@ -73,11 +73,13 @@ nav {
   position: fixed;
   top: calc(var(--header-height));
   width: 99%;
-  height: calc(var(--nav-height) + 20px);
+  height: var(--nav-height);
   padding-left: 10px;
-  
-  
-  
+  background-color: #ffffff;
+  align-items: start;
+
+
+
   /* for three buttons
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;*/
@@ -136,6 +138,16 @@ h1 {
   letter-spacing: 30px;
 }
 
+h2 {
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  text-decoration-color: #000;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+
+}
+
 /*Buttons*/
 #title {
   margin-top: 0;
@@ -189,17 +201,19 @@ h1 {
   font-weight: bolder;
   font-size: 16px;
   border: none;
-  border-radius: 5px;
+
   cursor: pointer;
   outline: none;
   display: inline-block;
-  transition: background-color 0.3s ease;
+
+
 }
 
 .btn2 {
-  width: 50%;
-  height: 50px;
+  width: 100%;
+  height: 80px;
   padding: 10px 20px;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -212,9 +226,17 @@ h1 {
 }
 
 .btn-nav {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 40px;
   background-color: #000000;
   color: #d33131;
+  height: 10px;
+}
+
+.textBtn1 {
+  position: absolute;
+  top: 5px;
+  transform: translate(-50%);
 }
 
 /*
@@ -252,9 +274,7 @@ h1 {
 
 .main img {
   max-width: 100%;
-  height: 100px;
   max-height: 100%;
-  /* Verhindert, dass das Bild größer wird als der Container */
 }
 
 .pictureMain {
@@ -282,7 +302,7 @@ h1 {
   max-height: 400px;
   object-fit: contain;
   display: block;
-  border-radius: 5px;
+  
 }
 
 .pictureMain div {
@@ -295,15 +315,16 @@ h1 {
 }
 
 .picture1 {
-  grid-area: picture1;
+  grid-area: picture4;
   grid-template-rows: 1fr auto;
 }
+
 .picture1 img {
   grid-row: 2;
 }
 
 .picture2 {
-  grid-area: picture2;
+  grid-area: picture5;
   grid-template-rows: 1fr auto;
 }
 
@@ -313,8 +334,9 @@ h1 {
 
 .picture3 {
   grid-area: picture3;
-  grid-template-columns: 1fr auto;
-  margin-right: 30%;
+  grid-template-rows: 1fr auto;
+  
+  padding-top: 30px;
 }
 
 .textContent1 {
@@ -326,6 +348,7 @@ h1 {
   font-weight: bold;
   font-size: 30px;
 }
+/*
 .textContent2 {
   grid-column: 1;
   display: grid;
@@ -334,25 +357,27 @@ h1 {
   text-align: center;
   margin-right: 10%;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 }
+*/
 
 .picture3 img {
   grid-column: 2;
 }
 
 .picture4 {
-  grid-area: picture4;
+  grid-area: picture1;
 }
 
 .picture5 {
-  grid-area: picture5;
+  grid-area: picture2;
 }
 
 .picture6 {
   grid-area: picture6;
-  grid-template-columns: 1fr auto;
-  margin-right: 30%;
+  grid-template-rows: 1fr auto;
+  
+  padding-top: 20px;
 }
 
 .picture6 img {
@@ -368,23 +393,36 @@ h1 {
 
 @media (max-width: 768px) {
   .grid-container-sale {
-    grid-template-columns: 1fr 3fr; /* Verkleinert die Breite von aside proportional */
+    grid-template-columns: 1fr 3fr;
+    /* Verkleinert die Breite von aside proportional */
   }
 
-  main div, main div * {
-    font-size: calc(1rem * 0.3); /* Verkleinert alle Texte innerhalb der `divs` */
+  main div,
+  main div * {
+    font-size: calc(1rem * 0.4);
+    /* Verkleinert alle Texte innerhalb der `divs` */
   }
 
   .textContent1 {
-    font-size: calc(30px * 0.4); /* Verkleinert spezielle Textinhalte in den Grids */
+    font-size: calc(30px * 0.4);
+    /* Verkleinert spezielle Textinhalte in den Grids */
   }
+
   .textContent2 {
-    font-size: calc(30px * 0.4); /* Verkleinert spezielle Textinhalte in den Grids */
+    font-size: calc(30px * 0.4);
+    /* Verkleinert spezielle Textinhalte in den Grids */
+  }
+
+  h2 {
+    font-size: calc(30px * 0.4);
+    letter-spacing: 5px;
   }
 
   aside {
-    transform: scale(0.6); /* Verkleinert alle Inhalte in der `aside` proportional */
-    transform-origin: top left; /* Verkleinert ausgehend von der oberen linken Ecke */
+    transform: scale(0.45);
+    /* Verkleinert alle Inhalte in der `aside` proportional */
+    transform-origin: top left;
+    /* Verkleinert ausgehend von der oberen linken Ecke */
   }
 
   nav {
@@ -397,6 +435,12 @@ h1 {
     font-size: 20px;
   }
 
+  .textBtn1 {
+
+    top: 15px;
+    transform: translate(-50%);
+  }
+
   header {
     display: grid;
     grid-template-columns: 1fr 10fr;
@@ -405,12 +449,15 @@ h1 {
   }
 
   footer {
-    width: 100%; /* Passt sich automatisch der Bildschirmbreite an */
-    padding: 10px; /* Weniger Padding für kompakteren Footer */
+    width: 100%;
+    /* Passt sich automatisch der Bildschirmbreite an */
+    padding: 10px;
+    /* Weniger Padding für kompakteren Footer */
   }
 
   footer .foottxt {
-    font-size: 0.8rem; /* Kleinere Schrift, aber noch gut lesbar */
+    font-size: 0.8rem;
+    /* Kleinere Schrift, aber noch gut lesbar */
   }
 
   .sidebarbtn {
@@ -426,20 +473,28 @@ h1 {
     grid-template-columns: 1fr 2fr;
   }
 
-  main div, main div * {
-    font-size: calc(1rem * 0.2); /* Verkleinert alle Texte auf kleineren Bildschirmen */
+  main div,
+  main div * {
+    font-size: calc(1rem * 0.4);
+    /* Verkleinert alle Texte auf kleineren Bildschirmen */
+
   }
 
   .textContent1 {
-    font-size: calc(30px * 0.3);
+    font-size: calc(30px * 0.4);
   }
+
   .textContent2 {
-    font-size: calc(30px * 0.3);
+    font-size: calc(30px * 0.4);
+  }
+
+  h2 {
+    font-size: calc(30px * 0.4);
+    letter-spacing: 10px;
   }
 
   aside {
-    transform: scale(0.5); /* Noch kleinere Verkleinerung bei sehr kleinen Bildschirmen */
-    transform-origin: top left;
+    display: none;
   }
 
   nav {
@@ -448,6 +503,12 @@ h1 {
 
   .btn-nav {
     font-size: 16px;
+  }
+
+  .textBtn1 {
+
+    top: 15px;
+    transform: translate(-50%);
   }
 
   header {
@@ -460,7 +521,8 @@ h1 {
   }
 
   footer .foottxt {
-    font-size: 0.7rem; /* Noch kleinere Schrift für kleine Bildschirme */
+    font-size: 0.7rem;
+    /* Noch kleinere Schrift für kleine Bildschirme */
   }
 
   .sidebarbtn {
