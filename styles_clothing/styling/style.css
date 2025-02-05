@@ -290,15 +290,8 @@ h2 {
 }
 
 
-
-
-
-
-
-
-
 /*---------------------------------------------------------------------------------------------------------------------*/
-/*--Product Page--*/
+/*-- Items Product Page --*/
 /*----------------------------------------------------------------------------------------------------------------------*/
 .pic{
   width: 500px;
@@ -330,7 +323,7 @@ h2 {
   padding: 0px;
   margin: 10px;
 }
-/* On screens that are 992px wide or less, go from four columns to two columns */
+
 @media screen and (max-width: 992px) {
   .picl {
     flex: 100%;
@@ -345,7 +338,7 @@ h2 {
   margin: 100px;
   line-height: 20px;
 }
-/* On screens that are 992px wide or less, go from four columns to two columns */
+
 @media screen and (max-width: 992px) {
   .text {
     flex: 100%;
@@ -369,9 +362,11 @@ h2 {
   background-color: transparent;
   border: 0px;
 }
+
 .lt:hover{
   font-weight: bold;
 }
+
 .gt{
   position: relative;
   font-size: 40px;
@@ -381,6 +376,7 @@ h2 {
   background-color: transparent;
   border: 0px;
 }
+
 .gt:hover{
   font-weight: bold;
 }
