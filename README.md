@@ -36,7 +36,7 @@ Styles Clothing ist ein moderner Webshop, der Kleidung und Accessoires präsenti
 
 ### ZIP-Datei:
 #### 1. ZIP-Datei herunterladen:
-  von einer bereitgestellten Quelle (Moodle, Kurs WebProgrammierung, Abgabe Praktische Aufgabenstellung
+  von einer bereitgestellten Quelle (Moodle, Kurs WebProgrammierung, Abgabe Praktische Aufgabenstellung)
 #### 2. Entpacken:
   entpacke die ZIP-Datei in ein beliebiges Verzeichnis auf deinem Rechner
 #### 3. Ins Projektverzeichnis wechseln:
