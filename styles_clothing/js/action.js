@@ -45,7 +45,7 @@ function loadPage(page) {
 function attachEventListener() {
   window.addEventListener("scroll", function() {
     let header = document.querySelector("header");
-    let imageHeight = document.querySelector("#home_img").offsetHeight - 150; // Höhe des Bildes
+    let imageHeight = document.querySelector("#home_img").offsetHeight - 150; // Hieght off image minus custom offset
 
     if (window.scrollY > imageHeight) {
       header.classList.remove("home");
@@ -56,13 +56,13 @@ function attachEventListener() {
     }
   });
   document.addEventListener("click", function (event) {
-    let link = event.target.closest("a"); // Überprüft, ob das geklickte Element ein Link oder in einem Link ist
+    let link = event.target.closest("a");
 
-    if (!link) return; // Falls kein <a>-Element geklickt wurde, nichts tun
+    if (!link) return;
 
     let page = link.getAttribute("href");
 
-    if (page && page.startsWith("pages/")) {  // Nur interne Seiten dynamisch laden
+    if (page && page.startsWith("pages/")) {
         event.preventDefault();
         loadPage(page);
     }
@@ -104,7 +104,7 @@ function init_GSAP() {
   // GSAP for sales
   try {
     gsap.to(".salePictureBlink", {
-      opacity: 0.5,  // Blinken durch Reduktion der Sichtbarkeit des Bildes
+      opacity: 0.5,
       duration: 0.8,
       repeat: -1,
       yoyo: true,
