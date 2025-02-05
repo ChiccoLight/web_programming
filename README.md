@@ -1,10 +1,10 @@
 # Projekt: Styles Clothing
 
 ## Projektmitglieder
-- Julian Schmidt     Matr.-Nr. 26844761 
-- Manuel Walser      Matr.-Nr. 35825
-- Peter Marschall    Matr.-Nr. 36281
-- Nico Gagel         Matr.-Nr. 36289
+- Julian Schmidt,     Matr.-Nr. 26844761 
+- Manuel Walser,      Matr.-Nr. 35825
+- Peter Marschall,    Matr.-Nr. 36281
+- Nico Gagel,         Matr.-Nr. 36289
 
 ## Verwendete Hilfsmittel und Quellen
 - [ChatGPT](https://chatgpt.com/)
