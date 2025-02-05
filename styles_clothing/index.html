@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Styles Clothing</title>
-  <link rel="stylesheet" href="../styles_clothing/styling/style.css">
+  <link rel="stylesheet" href="styling/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="../styles_clothing/js/action.js"></script>
+  <script src="js/action.js"></script>
 </head>
 
 <body>
@@ -18,17 +18,18 @@
     <h1>styles clothing</h1>
     <button id="sidebar_btn" onclick="sidebar_open()">☰</button>
     <nav id="sidebar">
-        <ul id="menu_list">
-            <li><a class="menu_item" href="pages/salePage.html" onclick="sidebar_close()" >Sale %</a></li>
-            <li><a class="menu_item" href="#sale" onclick="sidebar_close()" >Caps</a></li>
-            <li><a class="menu_item" href="#pants" onclick="sidebar_close()" >Pants</a></li>
-            <li><a class="menu_item" href="#shorts" onclick="sidebar_close()" >Shorts</a></li>
-            <li><a class="menu_item" href="#shirts" onclick="sidebar_close()" >Shirts</a></li>
-            <li><a class="menu_item" href="#sweater" onclick="sidebar_close()" >Sweater</a></li>
-            <li><a class="menu_item" href="pages/contact.html" onclick="sidebar_close()" >Contact</a></li>
-            <li><button id="sidebar_close_btn" onclick="sidebar_close()" >&times;</button></li>
-        </ul>
-      </nav>
+      <ul id="menu_list">
+        <li><a class="menu_item" href="pages/home.html" onclick="sidebar_close()" >Home</a></li>
+          <li><a class="menu_item" href="pages/salePage.html" onclick="sidebar_close()" >Sale %</a></li>
+          <li><a class="menu_item" href="#sale" onclick="sidebar_close()" >Caps</a></li>
+          <li><a class="menu_item" href="#pants" onclick="sidebar_close()" >Pants</a></li>
+          <li><a class="menu_item" href="#shorts" onclick="sidebar_close()" >Shorts</a></li>
+          <li><a class="menu_item" href="#shirts" onclick="sidebar_close()" >Shirts</a></li>
+          <li><a class="menu_item" href="#sweater" onclick="sidebar_close()" >Sweater</a></li>
+          <li><a class="menu_item" href="pages/contact.html" onclick="sidebar_close()" >Contact</a></li>
+          <li><button id="sidebar_close_btn" onclick="sidebar_close()" >&times;</button></li>
+      </ul>
+    </nav>
   </header>
 
   <!---------------------------------------------------------------------------------------------------------------------->
