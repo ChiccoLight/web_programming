@@ -186,15 +186,3 @@ function setSize(size) {
           console.warn("Invalid size:", size);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-  

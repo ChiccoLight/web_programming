@@ -1,35 +1,39 @@
 <link rel="stylesheet" href="../styling/style.css">
-    <h2>Blazer</h2>
-    
-    <div class="row">
+<script src="../js/action.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-            <div class="picl">
-                <img class="pic" id="pic" onclick="imgOpen()" src="../pictures/clothepics/P1/B1.jpg"></img>
-                <button onclick="furtherPic(2)" id="lt" class="lt">&lt</button>
-                <button onclick="ratherPic(2)" id="gt" class="gt">&gt</button>
-            </div>
-        
-        
-            <div class="text">
-                <h3>Blazer</h3>
-                <p>Zeitloser BOSS Anzug. Das gerade geschnittene Ensemble mit klassischer Silhouette ist aus einem elastischen Schurwoll-Mix gefertigt, der optimale Bewegungsfreiheit verspricht.
-                    Dieses Produkt wird mit nachhaltiger gewonnener Wolle gefertigt. Nachhaltiger gewonnen bedeutet für uns mulesingfrei unter Einhaltung der "Fünf Freiheiten für das Tierwohl".
-                </p>    
-                <ul class="list">
-                <li>Regular Fit</li>
-                <li>Fallendes Revers</li>
-                <li>Verschluss oben: Knopfverschluss</li>
-                <li>Anzahl der Knöpfe: 2</li>
-                <li>Brusttaschen mit Leiste</li>
-                <li>Taschen oben: Leistentaschen</li>
-                <li>Manschetten mit Kissing-Buttons</li>
-                <li>Seitenschlitz</li>
-                <li>Partielles Innenfutter</li>
-                </ul>
-                <button id="S" onclick="setSize('S')" class="size">S</button>
-                <button id="M" onclick="setSize('M')" class="size">M</button>
-                <button id="L" onclick="setSize('L')" class="size">L</button>
-                <button id="XL" onclick="setSize('')" class="size">XL</button><br>
-                <img id="paypal" src="../pictures/PayPal.jpg">
-            </div>
+<h2>Blazer</h2>
+
+<div class="item_container">
+
+    <div class="picl">
+        <img class="pic" id="pic" onclick="imgOpen()" src="../pictures/clothepics/P1/B1.jpg"></img>
+        <button onclick="furtherPic(2)" id="lt" class="lt">&lt</button>
+        <button onclick="ratherPic(2)" id="gt" class="gt">&gt</button>
     </div>
+
+
+    <div class="text">
+        <h3>Blazer</h3>
+        <p>Zeitloser BOSS Anzug. Das gerade geschnittene Ensemble mit klassischer Silhouette ist aus einem elastischen Schurwoll-Mix gefertigt, der optimale Bewegungsfreiheit verspricht.
+            Dieses Produkt wird mit nachhaltiger gewonnener Wolle gefertigt. Nachhaltiger gewonnen bedeutet für uns mulesingfrei unter Einhaltung der "Fünf Freiheiten für das Tierwohl".
+        </p>    
+        <ul class="list">
+        <li>Regular Fit</li>
+        <li>Fallendes Revers</li>
+        <li>Verschluss oben: Knopfverschluss</li>
+        <li>Anzahl der Knöpfe: 2</li>
+        <li>Brusttaschen mit Leiste</li>
+        <li>Taschen oben: Leistentaschen</li>
+        <li>Manschetten mit Kissing-Buttons</li>
+        <li>Seitenschlitz</li>
+        <li>Partielles Innenfutter</li>
+        </ul>
+        <button id="S" onclick="setSize('S')" class="size">S</button>
+        <button id="M" onclick="setSize('M')" class="size">M</button>
+        <button id="L" onclick="setSize('L')" class="size">L</button>
+        <button id="XL" onclick="setSize('XL')" class="size">XL</button><br>
+        <img id="paypal" src="../pictures/PayPal.jpg">
+    </div>
+</div>
