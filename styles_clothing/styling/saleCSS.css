@@ -17,7 +17,7 @@
 
 .saleBanner {
   grid-area: sale;
-  padding-top: 100px;
+  padding-top: 120px;
   width: 100%;
   height: var(--header-height);
   justify-content: center;
@@ -48,7 +48,6 @@
 main {
   grid-area: main;
   display: grid;
-  
   padding-bottom: 10px;
   margin-right: 10px;
 }
