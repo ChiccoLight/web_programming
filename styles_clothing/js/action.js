@@ -9,35 +9,63 @@ init();
 function init() {
   // Register Scroll Trigger Plugin
   gsap.registerPlugin(ScrollTrigger);
+  loadPage("pages/home.html"); // Initializes website with home site
+  attachEventListener();
+}
 
 
-  // Event listener and functions for dynamic loading of inner html
-  document.addEventListener("DOMContentLoaded", function () {
-    loadPage("pages/home.html"); // Initializes website with home site
-    /**
-     * Loads the given page as inner html. The layout of the index stays present.
-     * @param {*} page The page to load as inner html in the layout.
-     */
-    function loadPage(page) {
-        fetch(page)
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById("content").innerHTML = html;
-                init_GSAP();
-            })
-            .catch(error => console.error("Fehler beim Laden der Seite:", error));
+/**
+ * Loads the given page as inner html. The layout of the index stays present.
+ * @param {*} page The page to load as inner html in the layout.
+ */
+function loadPage(page) {
+  fetch(page)
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById("content").innerHTML = html;
+        init_GSAP();
+        scrollToTop();
+        // Set different header background color on different pages.
+        let header = document.querySelector("header");
+        if (page === "pages/home.html") {
+          header.classList.remove("default");
+          header.classList.add("home");
+        } else {
+          header.classList.remove("home");
+          header.classList.add("default");
+        }
+    })
+    .catch(error => console.error("Fehler beim Laden der Seite:", error));
+}
+
+
+/**
+ * Attaches functions to event listener for dynamic loading of inner html.
+ */
+function attachEventListener() {
+  window.addEventListener("scroll", function() {
+    let header = document.querySelector("header");
+    let imageHeight = document.querySelector("#home_img").offsetHeight - 150; // Höhe des Bildes
+
+    if (window.scrollY > imageHeight) {
+      header.classList.remove("home");
+      header.classList.add("default");
+    } else {
+      header.classList.remove("default");
+      header.classList.add("home");
     }
+  });
+  document.addEventListener("click", function (event) {
+    let link = event.target.closest("a"); // Überprüft, ob das geklickte Element ein Link oder in einem Link ist
 
-    // Button events for the navigation
-    document.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            let page = this.getAttribute("href");
-            if (page) {
-                loadPage(page);
-            }
-        });
-    });
+    if (!link) return; // Falls kein <a>-Element geklickt wurde, nichts tun
+
+    let page = link.getAttribute("href");
+
+    if (page && page.startsWith("pages/")) {  // Nur interne Seiten dynamisch laden
+        event.preventDefault();
+        loadPage(page);
+    }
   });
 }
 
@@ -87,6 +115,17 @@ function init_GSAP() {
 
 
 /**
+ * Scrolls the window to the top.
+ */
+function scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Sanftes Scrollen
+  });
+}
+
+
+/**
  * Open the sidebar with animation.
  * Sets the sidebar visible and animates it to the right.
  */
@@ -97,7 +136,6 @@ function sidebar_open() {
       left: 0,
       ease: "power3.out"
   });
-  document.getElementById("sidebarbtn").style.color = "#fff";
 }
 
 
@@ -114,7 +152,6 @@ function sidebar_close() {
           document.getElementById("sidebar").style.display = "none";
       }
   });
-  document.getElementById("sidebarbtn").style.color = "#000";
 }
 
 
