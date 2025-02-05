@@ -70,7 +70,7 @@ function init_GSAP() {
       );
   });
   // GSAP for sales
-  gsap.to(".headerRightBlink", {
+  gsap.to(".salePictureBlink", {
     opacity: 0.5,  // Blinken durch Reduktion der Sichtbarkeit des Bildes
     duration: 0.8,
     repeat: -1,
@@ -186,9 +186,6 @@ function setSize(size) {
           console.warn("Invalid size:", size);
   }
 }
-
-
-
 
 
 

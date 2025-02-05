@@ -1,21 +1,53 @@
 :root {
   --header-height: 80px;
   --grid-gap-bottom: 0px;
+  --sale-picture-height: 50px;
+
 }
 
 .grid-container-sale {
   display: grid;
   grid-template-areas:
+    "sale sale"
     "main main";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr auto;
   width: 100%;
+}
+
+.saleBanner {
+  grid-area: sale;
+  margin-top: calc(var(--header-height)+50 px);
+  width: 100%;
+  height: var(--header-height);
+  justify-content: center;
+  display: grid;
+}
+
+.salePictureRow {
+  background-color: #ffffff;
+  height: var(--sale-picture-height);
+  position: relative;
+}
+
+.salePictureBlink {
+  content: "";
+  position: absolute;
+  display: grid;
+  align-items: center;
+  width: 90%;
+  height: var(--sale-picture-height);
+  background-image: url("../pictures/salepics/sale2.png");
+  background-size: contain;
+  opacity: 1;
+  /* Start mit voller Sichtbarkeit */
+  z-index: 1;
 }
 
 main {
   grid-area: main;
   display: grid;
-  padding-top: calc(var(--header-height) + var(--grid-gap-bottom));
+  padding-top: calc(var(--header-height));
   padding-bottom: 10px;
   margin-right: 10px;
 }
@@ -88,7 +120,7 @@ h2 {
   max-height: 400px;
   object-fit: contain;
   display: block;
-  
+
 }
 
 .pictureMain div {
@@ -131,7 +163,7 @@ h2 {
 .picture3 {
   grid-area: picture3;
   grid-template-rows: 1fr auto;
-  
+
   padding-top: 30px;
 }
 
