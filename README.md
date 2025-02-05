@@ -19,16 +19,16 @@
 Styles Clothing ist ein moderner Webshop, der Kleidung und Accessoires präsentiert und zum Kauf anbietet.
 
 # Projekt-Features
-**- Produktgalerie:**           Übersichtliche Darstellung unserer Mode
-**- Interaktive Animation:**    Lebendiges Einkaufserlebnis mit GSAP
-**- Responsives Design:**       Optimiert für verschiedene Geräte
-**- Einfache Navigation:**      Schneller Zugriff auf alle wichtigen Bereiche
+**- Produktgalerie:**           Übersichtliche Darstellung unserer Mode  
+**- Interaktive Animation:**    Lebendiges Einkaufserlebnis mit GSAP  
+**- Responsives Design:**       Optimiert für verschiedene Geräte  
+**- Einfache Navigation:**      Schneller Zugriff auf alle wichtigen Bereiche  
 
 # Technologien
-**- HTML5:**                   Struktur der Seiten
-**- CSS3:**                    Stile und Layout
-**- JavaScript (DOM):**        Interaktive Funktionen und Produktlogik
-**- GSAP:**                    Animationen für dynamisches Verhalten
+**- HTML5:**                   Struktur der Seiten  
+**- CSS3:**                    Stile und Layout  
+**- JavaScript (DOM):**        Interaktive Funktionen und Produktlogik  
+**- GSAP:**                    Animationen für dynamisches Verhalten  
 
 
 ## Website lokal starten
