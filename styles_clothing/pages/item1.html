@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item1</title>
-    <link rel="stylesheet" href="../styling/style.css">
-</head>
-<body>
-
+<link rel="stylesheet" href="../styling/style.css">
     <h2>Blazer</h2>
     
     <div class="row">
@@ -35,13 +26,10 @@
                 <li>Seitenschlitz</li>
                 <li>Partielles Innenfutter</li>
                 </ul>
-                <button id="S" onclick="sizeColS()" class="size">S</button>
-                <button id="M" onclick="sizeColM()" class="size">M</button>
-                <button id="L" onclick="sizeColL()" class="size">L</button>
-                <button id="XL" onclick="sizeColXL()" class="size">XL</button><br>
+                <button id="S" onclick="setSize('S')" class="size">S</button>
+                <button id="M" onclick="setSize('M')" class="size">M</button>
+                <button id="L" onclick="setSize('L')" class="size">L</button>
+                <button id="XL" onclick="setSize('')" class="size">XL</button><br>
                 <img id="paypal" src="../pictures/PayPal.jpg">
             </div>
     </div>
-<script src="../js/action.js"></script>
-</body>
-</html>
