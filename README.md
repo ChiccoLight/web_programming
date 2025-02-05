@@ -18,13 +18,13 @@
 ### Styles Clothing - Webshop für Fashion und Accessoires
 Styles Clothing ist ein moderner Webshop, der Kleidung und Accessoires präsentiert und zum Kauf anbietet.
 
-# Projekt-Features
+### Projekt-Features
 **- Produktgalerie:**           Übersichtliche Darstellung unserer Mode  
 **- Interaktive Animation:**    Lebendiges Einkaufserlebnis mit GSAP  
 **- Responsives Design:**       Optimiert für verschiedene Geräte  
 **- Einfache Navigation:**      Schneller Zugriff auf alle wichtigen Bereiche  
 
-# Technologien
+### Technologien
 **- HTML5:**                   Struktur der Seiten  
 **- CSS3:**                    Stile und Layout  
 **- JavaScript (DOM):**        Interaktive Funktionen und Produktlogik  
@@ -34,11 +34,11 @@ Styles Clothing ist ein moderner Webshop, der Kleidung und Accessoires präsenti
 ## Website lokal starten
 ### Installation und Setup (ZIP-Version)
 
-## ZIP-Datei:
-### 1. ZIP-Datei herunterladen:
+### ZIP-Datei:
+#### 1. ZIP-Datei herunterladen:
   von einer bereitgestellten Quelle (Moodle, Kurs WebProgrammierung, Abgabe Praktische Aufgabenstellung
-### 2. Entpacken:
+#### 2. Entpacken:
   entpacke die ZIP-Datei in ein beliebiges Verzeichnis auf deinem Rechner
-### 3. Ins Projektverzeichnis wechseln:
+#### 3. Ins Projektverzeichnis wechseln:
   navigiere in das Verzeichnis, in dem sich die entpackten Dateien befinden
-### 4. index.html öffnen
+#### 4. index.html öffnen
