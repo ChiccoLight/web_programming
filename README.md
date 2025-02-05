@@ -1,33 +1,44 @@
 # Projekt: Styles Clothing
 
 ## Projektmitglieder
-- John Doe (Matrikelnummer: 123456)
-- John Doe (Matrikelnummer: 654321)
-- John Doe (Matrikelnummer: 112233)
-- Jane Doe (Matrikelnummer: 332211)
+- Julian Schmidt     Matr.-Nr. 26844761 
+- Manuel Walser      Matr.-Nr. 35825
+- Peter Marschall    Matr.-Nr. 36281
+- Nico Gagel         Matr.-Nr. 36289
 
 ## Verwendete Hilfsmittel und Quellen
 - [ChatGPT](https://chatgpt.com/)
-- [Hilfsmittel 2](#)
-- [Quelle 1](#)
-- [Quelle 2](#)
+- [W3schools](https://www.w3schools.com/)
+- [GSAP](https://gsap.com/docs/v3/)
+- [HTML - SELFHTML-Wiki](https://wiki.selfhtml.org/wiki/HTML)
+- Kurs WebProgrammierung Folien (moodle)
+
 
 ## Beschreibung
+### Styles Clothing - Webshop für Fashion und Accessoires
+Styles Clothing ist ein moderner Webshop, der Kleidung und Accessoires präsentiert und zum Kauf anbietet.
 
-Dieses Projekt ist eine Website für Styles Clothing, die verschiedene Kleidungsstücke und Accessoires präsentiert. Umgesetzt ist die Website mit HTML, CSS und JavaScript 
+#Projekt-Features
+- Produktgalerie:           Übersichtliche Darstellung unserer Mode
+- Interaktive Animation:    Lebendiges Einkaufserlebnis mit GSAP
+- Responsives Design:       Optimiert für verschiedene Geräte
+- Einfache Navigation:      Schneller Zugriff auf alle wichtigen Bereiche
+
+#Technologien
+- HTML5:                   Struktur der Seiten
+- CSS3:                    Stile und Layout
+- JavaScript (DOM):        Interaktive Funktionen und Produktlogik
+- GSAP:                    Animationen für dynamisches Verhalten
+
 
 ### Website lokal starten
+###Installation und Setup (ZIP-Version)
 
-1. Klone das Repository:
-    ```sh
-    git clone https://github.com/ChiccoLight/web_programming.git
-    ```
-
-2. Navigiere in das Projektverzeichnis:
-    ```sh
-    cd styles_clothing
-    ```
-
-3. Öffne die [index.html] Datei in deinem bevorzugten Webbrowser.
-
-4. Die Website sollte nun lokal laufen und angezeigt werden.
+##ZIP-Datei:
+#1. ZIP-Datei herunterladen:
+  von einer bereitgestellten Quelle (Moodle, Kurs WebProgrammierung, Abgabe Praktische Aufgabenstellung
+#2. Entpacken:
+  entpacke die ZIP-Datei in ein beliebiges Verzeichnis auf deinem Rechner
+#3. Ins Projektverzeichnis wechseln:
+  navigiere in das Verzeichnis, in dem sich die entpackten Dateien befinden
+#4. index.html öffnen
