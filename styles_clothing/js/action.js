@@ -48,6 +48,7 @@ function init() {
  * @warning This function as to be called after the inner HTML has been loaded.
  */
 function init_GSAP() {
+  // GSAP for home
   gsap.utils.toArray(".item").forEach((item, index) => {
       gsap.fromTo(item, 
           { opacity: 0, y: 50 }, 
@@ -67,6 +68,20 @@ function init_GSAP() {
               }
           }
       );
+  });
+  // GSAP for sales
+  gsap.to(".headerRightBlink", {
+    opacity: 0.5,  // Blinken durch Reduktion der Sichtbarkeit des Bildes
+    duration: 0.8,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut"
+  });
+  document.getElementById('scrollToTop').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
   });
 }
 
@@ -184,18 +199,5 @@ function setSize(size) {
 
 
 
-gsap.to(".headerRightBlink", {
-  opacity: 0.5,  // Blinken durch Reduktion der Sichtbarkeit des Bildes
-  duration: 0.8,
-  repeat: -1,
-  yoyo: true,
-  ease: "power1.inOut"
-});
 
-document.getElementById('scrollToTop').addEventListener('click', function() {
-  window.scrollTo({
-      top: 0,
-      behavior: 'smooth'  // Sanftes Scrollen
-  });
-});
   
