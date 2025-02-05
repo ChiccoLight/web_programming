@@ -46,6 +46,5 @@ Styles Clothing ist ein moderner Webshop, der Kleidung und Accessoires präsenti
 #### **4. index.html öffnen**
   rechts click auf die index.html und mit Live Server öffnen.
 
-  **Alternative:**  
-  - **Chrome / Edge:** Drag & Drop der `index.html` in den Browser  
-  - **Firefox:** Datei über `Datei → Datei öffnen` auswählen
+**ACHTUNG** Die Index kann in vielen Fällen auf Grund von Sicherheitseinstellungen und 'fetch'
+ nicht in dem Browser direkt geöffnet werden.
