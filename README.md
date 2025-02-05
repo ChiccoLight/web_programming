@@ -35,10 +35,17 @@ Styles Clothing ist ein moderner Webshop, der Kleidung und Accessoires präsenti
 ### Installation und Setup (ZIP-Version)
 
 ### ZIP-Datei:
-#### 1. ZIP-Datei herunterladen:
+#### **1. ZIP-Datei herunterladen**
   von einer bereitgestellten Quelle (Moodle, Kurs WebProgrammierung, Abgabe Praktische Aufgabenstellung)
-#### 2. Entpacken:
+#### **2. Entpacken**
   entpacke die ZIP-Datei in ein beliebiges Verzeichnis auf deinem Rechner
-#### 3. Ins Projektverzeichnis wechseln:
+#### **3. Ins Projektverzeichnis wechseln**
   navigiere in das Verzeichnis, in dem sich die entpackten Dateien befinden
-#### 4. index.html öffnen
+#### **4. Öffne in Visual Studio Code**
+  öffne den Projektordner in Visual Studio Code
+#### **4. index.html öffnen**
+  rechts click auf die index.html und mit Live Server öffnen.
+
+  **Alternative:**  
+  - **Chrome / Edge:** Drag & Drop der `index.html` in den Browser  
+  - **Firefox:** Datei über `Datei → Datei öffnen` auswählen
